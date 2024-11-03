@@ -1,0 +1,11 @@
+p {
+    margin: 0;
+}
+
+.texto-menor {
+    font-size: 13px;
+}
+
+.div-formato-celular {
+    width: 325px;
+}
