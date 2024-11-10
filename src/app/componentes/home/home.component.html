@@ -8,40 +8,34 @@
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
   <div class="carousel-inner">
-    <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
-        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide"
-        preserveAspectRatio="xMidYMid slice" focusable="false">
-        <title>Placeholder</title>
-        <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First
-          slide</text>
-      </svg>
+    <div class="carousel-item active">
+      <img class="w-100 img-fluid d-md-none" src="./assets/img/Mobile/banner1-mobile.png" alt="Modelo Feminino">
+      <img class="w-100 img-fluid d-none d-md-block d-xl-none" src="./assets/img/Tablet/banner1-tablet.png"
+        alt="Modelo Feminino">
+      <img class="w-100 img-fluid d-none d-xl-block" src="./assets/img/Desktop/banner1-desktop.png"
+        alt="Modelo Feminino">
       <div class="carousel-caption d-none d-md-block">
         <h5>First slide label</h5>
         <p>Some representative placeholder content for the first slide.</p>
       </div>
     </div>
     <div class="carousel-item active">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
-        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide"
-        preserveAspectRatio="xMidYMid slice" focusable="false">
-        <title>Placeholder</title>
-        <rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second
-          slide</text>
-      </svg>
+      <img class="w-100 img-fluid d-md-none" src="./assets/img/Mobile/banner2-mobile.png" alt="Coleção Atenporal">
+      <img class="w-100 img-fluid d-none d-md-block d-xl-none" src="./assets/img/Tablet/banner2-tablet.png"
+        alt="Coleção Atenporal">
+      <img class="w-100 img-fluid d-none d-xl-block" src="./assets/img/Desktop/banner2-desktop.png"
+        alt="Coleção Atenporal">
       <div class="carousel-caption d-none d-md-block">
         <h5>Second slide label</h5>
         <p>Some representative placeholder content for the second slide.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
-        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide"
-        preserveAspectRatio="xMidYMid slice" focusable="false">
-        <title>Placeholder</title>
-        <rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third
-          slide</text>
-      </svg>
+      <img class="w-100 img-fluid d-md-none" src="./assets/img/Mobile/banner3-mobile.png" alt="Modelo Maculino">
+      <img class="w-100 img-fluid d-none d-md-block d-xl-none" src="./assets/img/Tablet/banner3-tablet.png"
+        alt="Modelo Maculino">
+      <img class="w-100 img-fluid d-none d-xl-block" src="./assets/img/Desktop/banner3-desktop.png"
+        alt="Modelo Maculino">
       <div class="carousel-caption d-none d-md-block">
         <h5>Third slide label</h5>
         <p>Some representative placeholder content for the third slide.</p>
@@ -50,25 +44,23 @@
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+    <span class="visually-hidden">Anterior</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+    <span class="visually-hidden">Próximo</span>
   </button>
 </div>
 
 <!-- card categoria -->
-<h2 class="text-center"> Busque Categoria</h2>
+<h2 class="text-center my-3 my-xl-5"> Busque Categoria</h2>
 <div class="container row mx-auto g-4">
   <div class="col-6 col-md-4 col-xxl-2" *ngFor="let categoria of categorias">
-    <div class="card">
-      <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg"
-        role="img" [attr.aria-label]="categoria.imagemAlt" preserveAspectRatio="xMidYMid slice" focusable="false">
-        <title>{{ categoria.nome }}</title>
-        <rect width="100%" height="100%" fill="#868e96"></rect>
-        <text x="50%" y="50%" fill="#dee2e6" dy=".3em">{{ categoria.imagemAlt }}</text>
-      </svg>
+    <div class="card border-0">
+      <img class="card-img-top rounded d-md-none d-block" [src]="categoria.imagemSrc" [alt]="categoria.imagemAlt">
+      <img class="card-img-top rounded d-none d-md-block d-xl-none" [src]="categoria.imagemSrc"
+        [alt]="categoria.imagemAlt">
+      <img class="card-img-top rounded d-none d-xl-block" [src]="categoria.imagemSrc" [alt]="categoria.imagemAlt">
       <div class="card-header bg-black text-bg-dark">
         <p class="text-center card-text">
           {{ categoria.nome }}
@@ -79,22 +71,20 @@
 </div>
 
 <!-- Produtos -->
-<h2 class="text-center">Produtos</h2>
-<div class="container row mx-auto g4">
-    <div class="col-12 col-md-6 col-xxl-4 pb-4" *ngFor="let produto of produtos">
-      <div class="card">
-        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg"
-          role="img" [attr.aria-label]="produto.imagemAlt" preserveAspectRatio="xMidYMid slice" focusable="false">
-          <title>{{ produto.titulo }}</title>
-          <rect width="100%" height="100%" fill="#868e96"></rect>
-          <text x="50%" y="50%" fill="#dee2e6" dy=".3em">{{ produto.imagemAlt }}</text>
-        </svg>
-        <div class="card-body">
-          <h5 class="card-title">{{ produto.titulo }}</h5>
-          <p class="card-text">{{ produto.descricao }}</p>
-          <p>{{ produto.preco }}</p>
-          <a href="#" class="btn btn-primary botao-lilas rounded-0 border-0">Ver mais</a>
-        </div>
+<h2 class="container text-center my-3 my-xl-5">Produtos que estão bombando !!</h2>
+<div class="container row mx-auto">
+  <div class="col-12 col-md-6 col-xxl-4 pb-4" *ngFor="let produto of produtos">
+    <div class="card" style="height: 100%;">
+      <img class="rounded d-md-none d-block" [src]="produto.imagemSrc" [alt]="produto.imagemAlt" >
+      <img class="rounded d-none d-md-block d-xl-none" [src]="produto.imagemSrc" [alt]="produto.imagemAlt" style="height: 430px;">
+      <img class="rounded d-none d-xl-block" [src]="produto.imagemSrc" [alt]="produto.imagemAlt" style="height: 530px;">
+
+      <div class="card-body">
+        <h5 class="card-title fw-bold">{{ produto.titulo }}</h5>
+        <p class="card-text">{{ produto.descricao }}</p>
+        <p class="fw-bold">{{ produto.preco }}</p>
+        <a href="#" class="btn btn-primary botao-lilas rounded-0 border-0">Ver mais</a>
       </div>
     </div>
+  </div>
 </div>
